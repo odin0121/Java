@@ -1,37 +1,43 @@
-package com.acharya.inherit;
+package com.acharya.labs;
 
 public class Employee {
+protected int id;
+protected int age;
+protected String name;
+protected boolean isPermanent;
 
-	int id;
-	String name;
-	double basic_salary;
-	double hra;
-	double lta;
-	double da;
-	double pf;
-	double tax;
-	
-	static String companyname = "acharya";
-	
-	public Employee() {
-		
-	}
-	public Employee(int id, String name, double basic_salary, double hra, double lta, double da, double pf,
-			double tax) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.basic_salary = basic_salary;
-		this.hra = hra;
-		this.lta = lta;
-		this.da = da;
-		this.pf = pf;
-		this.tax = tax;
-	}
-	
-	public void computeSalary() {
-		double netsalary = basic_salary + hra + da + lta - pf - tax;
-		System.out.println("The employee of id "+id+" whose name is "+name+" has net salary "+ netsalary);
-	}
+
+
+public void displayDetails() {
+
+    System.out.println("Employee Id: " + id);
+    System.out.println("Employee Name: " + name);
+    System.out.println("Employee Age: " + age);
+    System.out.println("Is Employee Permanent: " + isPermanent);
 
 }
+
+
+
+public static void main(String[] args) {
+
+    Employee emp = new Employee();
+
+   
+    emp.age = (int) 35.5;
+    emp.id = 200;
+    emp.name = "Daniel";
+    emp.isPermanent = true;
+    emp.displayDetails();
+
+    System.out.println("Successfully started");
+
+}
+
+
+
+
+
+}
+
+

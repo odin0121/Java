@@ -1,42 +1,74 @@
-package com.acharya.classes;
+package com.acharya.labs;
+class Student{
 
-public class Student {
-	int id;
-	String firstname;
-	String lastname;
-	double fees;
+   private String studentName;
 
-	public Student(int id, String firstname, String lastname, double fees) {
-		this.id = id;
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.fees = fees;
+    private String collegeName;
 
-	}
+    private int studentId;
 
-	public void getName() {
-		System.out.println("Student Name is = " + firstname + lastname);
+    public void setStudentName(String name) {
 
-	}
+        this.studentName = name;
 
-	public void getFees() {
-		System.out.println("Fees of this student is = " + fees);
+    }
 
-	}
+    public void setCollegeName(String college) {
 
-	public static void main(String args[]) {
-		Student st = new Student(10, "Suprith", "Kumar", 10000);
-		Student st1 = new Student(11, "Prajwal", "Gurav", 10000);
-		Student st2 = new Student(12, "charan", "Teja", 10000);
-		Student st3 = new Student(13, "Manoj", "Gowda", 10000);
+        this.collegeName = college;
 
-		st.getName();
-		st.getFees();
-		st1.getName();
-		st1.getFees();
-		st2.getName();
-		st2.getFees();
-		st3.getName();
-		st3.getFees();
-	}
+    }
+
+    public void setStudentId(int id) {
+
+        this.studentId = id;
+
+    }
+
+    public String getStudentName() {
+
+        return studentName;
+
+    }
+
+    public String getCollegeName() {
+
+        return collegeName;
+
+    }
+
+    public int getStudentId() {
+
+        return studentId;
+
+    }
+
+public void displayDetails() {
+
+        System.out.println("Student ID: " + studentId);
+
+        System.out.println("Student Name: " + studentName);
+
+        System.out.println("College Name: " + collegeName);
+
+    }
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+
+        s1.setStudentId(001);
+
+        s1.setStudentName("Daniel");
+
+        s1.setCollegeName("Acharya College");
+
+ 
+
+        s1.displayDetails();
+
+        System.out.println("Successful");
+
+    }
+
 }
